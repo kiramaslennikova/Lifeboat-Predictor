@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./code/deployment/api
+      dockerfile: Dockerfile
+    container_name: titanic_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models/titanic_model.pkl:/app/titanic_model.pkl  # insert the model inside the container
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./code/deployment/app
+      dockerfile: Dockerfile
+    container_name: titanic_app
+    ports:
+      - "8550:8550"
+    environment:
+      - API_URL=http://api:8000/predict
+    depends_on:
+      - api
+    restart: unless-stopped
