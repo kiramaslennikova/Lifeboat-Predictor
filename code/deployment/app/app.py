@@ -8,16 +8,17 @@ def main(page: ft.Page):
     page.title = "Lifeboat Predictor"
     page.window_width = 500
     page.window_height = 700
+    page.bgcolor = ft.Colors.WHITE
 
 
     prediction_box = ft.Container(
         content=ft.Text(value="", size=20, color=ft.Colors.BLACK),
-        border=ft.border.all(1, ft.Colors.BLACK),  
-        border_radius=5,          
-        padding=10,                 
-        alignment=ft.alignment.center,             
-        width=400,                           
-        height=60                         
+        border=ft.border.all(1, ft.Colors.BLACK),  # рамка
+        border_radius=5,                           # скругление углов
+        padding=10,                                # внутренний отступ
+        alignment=ft.alignment.center,             # текст по центру
+        width=400,                                 # ширина
+        height=60                                  # высота
     )
 
     # Поля ввода
@@ -56,24 +57,10 @@ def main(page: ft.Page):
         height=50
     )
 
-    ASSETS_PATH = os.path.join(os.path.dirname(__file__), "images", "titanic.png")
-
-    if not os.path.exists(ASSETS_PATH):
-        print(f"⚠️ WARNING: Image file not found: {ASSETS_PATH}")
-    else:
-        print(f"✅ Image found: {ASSETS_PATH}")
-
+    
+    
     stack = ft.Stack(
         controls=[
-            ft.Container(
-                content=ft.Image(
-                    src=ASSETS_PATH if os.path.exists(ASSETS_PATH) else None,
-                    width=780,
-                    height=None,
-                    fit=ft.ImageFit.CONTAIN
-                ),
-                padding=ft.Padding(right=0, top=15, bottom=0, left=430)  # сдвиг вправо на 180
-            ),
             ft.Container(
                 content=ft.Column([
                     pclass_input,
