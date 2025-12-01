@@ -2,8 +2,11 @@
 ## 3D Scene Navigation & Video Rendering System
 
 **Project:** Introduction to Computer Vision: Assignment 4  
+
 **Author:** Kira Maslennikova
+
 **Innopolis e-Mail:** k.maslennikova@innopolis.university
+
 **Tasks Completed:** 3 out of 10 (Tasks 1, 4, 5)
 
 ---
