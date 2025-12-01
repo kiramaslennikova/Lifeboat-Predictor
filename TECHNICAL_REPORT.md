@@ -93,14 +93,6 @@ Step 5: Path smoothing
   - Result: smooth camera trajectory with C² continuity
 ```
 
-**Evidence:**
-```
-Free-space detection:
-  - Museume.ply: ~5000 free-space voxels found
-  - Waypoints generated: 10
-  - Path length (raw): ~150m
-  - Path length (smoothed): ~155m
-```
 
 **Code locations:**
 - Free-space: `src/path_planner.py:find_free_space_points` (lines 5-50)
