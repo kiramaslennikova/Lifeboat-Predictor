@@ -41,7 +41,6 @@ Output: output/video.mp4
   - 300 frames rendered
   - Resolution: 1920×1080
   - Frame rate: 30 fps
-  - Duration: 10 seconds
   - File size: ~50-100 MB
 ```
 
